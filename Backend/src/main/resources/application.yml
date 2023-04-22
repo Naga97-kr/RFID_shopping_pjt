@@ -1,0 +1,56 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${HISHOP_MAIL_ID}
+    password: ${HISHOP_MAIL_PASSWORD}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  datasource:
+  
+
+# 배포용
+    url: ${HISHOP_DB_URL}
+    username: ${HISHOP_DB_ID}
+    password: ${HISHOP_DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+#    defer-datasource-initialization: true
+#  sql:
+#    init:
+#      mode: always
+#  profiles:
+#    active:
+
+#  batch:
+#    job.enabled: true # true: ? ??? job ?? ?
+#    jdbc.initialize-schema: always
+
+logging:
+  level:
+    org.hibernate.sql: debug
+    org.hibernate.type: trace
+    org.springframework.batch: debug
+    com.zaxxer.hikari.HikariConfig: DEBUG
+    com.zaxxer.hikari: TRACE
+#    org.springframework : debug
+#    org.springframework.web : debug
+
+global:
+  jwt-token:
+    signer: ${HISHOP_JWT_SIGNER}

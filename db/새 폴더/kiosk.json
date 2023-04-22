@@ -1,0 +1,26 @@
+[
+    {
+        "url" : "http://xxx:7777",
+        "branchId" : 1
+    },
+    {
+        "url" : "http://xxx:7788",
+        "branchId" : 1
+    },
+    {
+        "url" : "http://xxx:9911",
+        "branchId" : 1
+    },
+    {
+        "url" : "http://xxx:7777",
+        "branchId" : 2
+    },
+    {
+        "url" : "http://xxx:7887",
+        "branchId" : 2
+    },
+    {
+        "url" : "http://xxx:9977",
+        "branchId" : 2
+    }
+]
